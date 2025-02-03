@@ -1,7 +1,7 @@
 import re
 
 def generator_numbers(text):
-    numbers = re.findall(r"\d+\.\d+", text)
+    numbers = re.findall(r"(?P<num>\d+\.\d+)", text)
     
     for num in numbers:
         yield float(num)
